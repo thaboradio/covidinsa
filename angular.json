@@ -100,6 +100,14 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/covidinsa",
+            "netlifyToken": "0e0a9109aa40e631d0f22fc29cb161953efb757524739d5e82a4cd723843381d",
+            "siteId": "0e0a9109aa40e631d0f22fc29cb161953efb757524739d5e82a4cd723843381d"
+          }
         }
       }
     },
