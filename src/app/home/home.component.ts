@@ -21,8 +21,7 @@ noData(Highcharts);
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-
+  ProvinceStats = [];
   SAStas: Covid = null;
   rawData: any[] = [];
   countryData: any[] = [];
@@ -35,6 +34,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     console.log('On Init');
     this.getData();
+    this.getProvinceStats();
     // this.getDetails();
 }
 
@@ -63,7 +63,7 @@ getData() {
         Recovered: this.covidInSA[0].Recovered,
         LastUpdate: this.covidInSA[0].Last_Update
       };
-
+      console.log(this.SAStas);
       this.options = {
         chart: {
           plotBackgroundColor: null,
@@ -117,5 +117,8 @@ getDetails() {
     });
 }
 
-
+getProvinceStats() {
+  this.ProvinceStats = this.covidService.provinces;
+  console.log('Provinces' + JSON.stringify(this.ProvinceStats));
+}
 }

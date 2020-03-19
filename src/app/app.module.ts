@@ -9,11 +9,13 @@ import { SafetyComponent } from './safety/safety.component';
 
 import {NgxPaginationModule} from 'ngx-pagination';
 import {HttpClientModule} from '@angular/common/http';
+import { NewsComponent } from './news/news.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SafetyComponent
+    SafetyComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

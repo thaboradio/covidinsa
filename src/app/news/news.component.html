@@ -1,0 +1,20 @@
+
+  <div class="container">
+    <div class="row">
+      <div class="card text-white bg-info ml-3 mb-3" *ngFor="let item of newCollections[0]
+    | paginate: {itemsPerPage: 4, currentPage: page}">
+        <!-- <img src="{{item.urlToImage}}" alt="" class="card-img-top"> -->
+        <div class="card-body">
+          <h4 class="card-title">{{item.title}}</h4>
+          <p class="card-text"></p>
+          <button class="btn text-white"> <a href="{{item.url}}" style="text-decoration: none; color: #ffffff;">Read More</a></button>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <pagination-controls (pageChange)="page = $event">
+  
+        </pagination-controls>
+      </div>
+  
+    </div>
+  </div>

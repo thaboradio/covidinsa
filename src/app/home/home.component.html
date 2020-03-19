@@ -2,7 +2,7 @@
   <figure class="highcharts-figure">
     <div id="container"></div>
   </figure>
-  <div class="row justify-content-center">
+  <!-- <div class="row justify-content-center">
     <h4>Last Updated - {{SAStas.LastUpdate | date}}</h4>
   </div>
   <div class="row justify-content-center">
@@ -48,5 +48,26 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Province</th>
+        <th scope="col">Confirmed</th>
+        <th scope="col">Deaths</th>
+        <th scope="col">Recovered</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of ProvinceStats;">
+        <th scope="row">{{p.id}}</th>
+        <td>{{p.Name}}</td>
+        <td [ngClass]="(p.Confirmed>1)?'bg-info':''">{{p.Confirmed}}</td>
+        <td>{{p.Deaths}}</td>
+        <td>{{p.Recovered}}</td>
+      </tr>
+    </tbody>
+  </table>
 

@@ -6,3 +6,16 @@
 .centerd {
     text-align: center !important;
 }
+
+.footer {
+ position: relative;
+ margin-top: 20px;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ /* height: 50px; */
+ color: #ffffff;
+ text-emphasis: bold;
+ text-align: center;  
+ background-color:#2193b0;
+}
